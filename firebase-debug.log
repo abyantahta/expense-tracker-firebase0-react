@@ -1,0 +1,48 @@
+[debug] [2024-04-06T20:37:35.431Z] ----------------------------------------------------------------------
+[debug] [2024-04-06T20:37:35.438Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-04-06T20:37:35.440Z] CLI Version:   13.6.1
+[debug] [2024-04-06T20:37:35.441Z] Platform:      win32
+[debug] [2024-04-06T20:37:35.442Z] Node Version:  v18.18.0
+[debug] [2024-04-06T20:37:35.444Z] Time:          Sun Apr 07 2024 03:37:35 GMT+0700 (Western Indonesia Time)
+[debug] [2024-04-06T20:37:35.444Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-06T20:37:35.674Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-06T20:37:35.676Z] > authorizing via signed-in user (abyantahta2002@gmail.com)
+[debug] [2024-04-06T20:37:35.676Z] [iam] checking project expense-tracker-a8b75 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-06T20:37:35.682Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/expense-tracker-a8b75:testIamPermissions [none]
+[debug] [2024-04-06T20:37:35.683Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/expense-tracker-a8b75:testIamPermissions x-goog-quota-user=projects/expense-tracker-a8b75
+[debug] [2024-04-06T20:37:35.684Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/expense-tracker-a8b75:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-06T20:37:37.666Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/expense-tracker-a8b75:testIamPermissions 200
+[debug] [2024-04-06T20:37:37.667Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/expense-tracker-a8b75:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-06T20:37:37.671Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/expense-tracker-a8b75 [none]
+[debug] [2024-04-06T20:37:38.717Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/expense-tracker-a8b75 200
+[debug] [2024-04-06T20:37:38.718Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/expense-tracker-a8b75 {"projectId":"expense-tracker-a8b75","projectNumber":"920889565784","displayName":"expense-tracker","name":"projects/expense-tracker-a8b75","resources":{"hostingSite":"expense-tracker-a8b75"},"state":"ACTIVE","etag":"1_47847667-3d77-4e73-935b-3372c56c77d8"}
+[info] 
+[info] === Deploying to 'expense-tracker-a8b75'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-04-06T20:37:38.739Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/expense-tracker-a8b75/versions [none]
+[debug] [2024-04-06T20:37:38.740Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/expense-tracker-a8b75/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-04-06T20:37:41.330Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/expense-tracker-a8b75/versions 200
+[debug] [2024-04-06T20:37:41.330Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/expense-tracker-a8b75/versions {"name":"projects/920889565784/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[expense-tracker-a8b75]: beginning deploy... 
+[info] i  hosting[expense-tracker-a8b75]: found 12 files in build 
+[debug] [2024-04-06T20:37:41.370Z] [hosting] uploading with 200 concurrency
+[debug] [2024-04-06T20:37:42.407Z] [hosting] hash cache [YnVpbGQ] stored for 12 files
+[debug] [2024-04-06T20:37:42.408Z] [hosting][hash queue][FINAL] {"max":1020,"min":5,"avg":101.83333333333333,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":1032}
+[debug] [2024-04-06T20:37:42.408Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/920889565784/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103:populateFiles [none]
+[debug] [2024-04-06T20:37:42.409Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/920889565784/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103:populateFiles {"files":{"/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/static/css/main.31d6cfe0.css":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e","/asset-manifest.json":"c37c7db00af93d770bacb656f9c1ed619944090f7a00cff7eb91d69fef0182a1","/index.html":"e65c3d69c4f3565e907b8ad6d0570e7fc1799f2f12058c69d421ae69595fdc7a","/static/js/main.789df5ca.js.LICENSE.txt":"b2cb5c7be55eb51edd6419e8cfc03bcc4ea7d8381669668faa5fe0ce3dca7b43","/static/js/main.789df5ca.js":"7a468253b7e5457601bad62ef088757544fcb6d8011d0425a44574d73455cddf","/static/js/main.789df5ca.js.map":"d50bcbc3bdf23ad5a9cdbe80ceb8b803a03cf281e20cfa7f7484991b2b079a9c"}}
+[debug] [2024-04-06T20:37:43.587Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/920889565784/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103:populateFiles 200
+[debug] [2024-04-06T20:37:43.587Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/920889565784/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103:populateFiles {"uploadRequiredHashes":["7a468253b7e5457601bad62ef088757544fcb6d8011d0425a44574d73455cddf","e65c3d69c4f3565e907b8ad6d0570e7fc1799f2f12058c69d421ae69595fdc7a","d50bcbc3bdf23ad5a9cdbe80ceb8b803a03cf281e20cfa7f7484991b2b079a9c","c37c7db00af93d770bacb656f9c1ed619944090f7a00cff7eb91d69fef0182a1"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files"}
+[debug] [2024-04-06T20:37:43.591Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/7a468253b7e5457601bad62ef088757544fcb6d8011d0425a44574d73455cddf [none]
+[debug] [2024-04-06T20:37:43.591Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/7a468253b7e5457601bad62ef088757544fcb6d8011d0425a44574d73455cddf [stream]
+[debug] [2024-04-06T20:37:43.594Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/e65c3d69c4f3565e907b8ad6d0570e7fc1799f2f12058c69d421ae69595fdc7a [none]
+[debug] [2024-04-06T20:37:43.594Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/e65c3d69c4f3565e907b8ad6d0570e7fc1799f2f12058c69d421ae69595fdc7a [stream]
+[debug] [2024-04-06T20:37:43.596Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/d50bcbc3bdf23ad5a9cdbe80ceb8b803a03cf281e20cfa7f7484991b2b079a9c [none]
+[debug] [2024-04-06T20:37:43.597Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/d50bcbc3bdf23ad5a9cdbe80ceb8b803a03cf281e20cfa7f7484991b2b079a9c [stream]
+[debug] [2024-04-06T20:37:43.599Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/c37c7db00af93d770bacb656f9c1ed619944090f7a00cff7eb91d69fef0182a1 [none]
+[debug] [2024-04-06T20:37:43.599Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/c37c7db00af93d770bacb656f9c1ed619944090f7a00cff7eb91d69fef0182a1 [stream]
+[debug] [2024-04-06T20:37:43.602Z] [hosting][populate queue][FINAL] {"max":1185,"min":1185,"avg":1185,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1197}
+[debug] [2024-04-06T20:37:43.602Z] [hosting] uploads queued: 4
+[debug] [2024-04-06T20:37:46.804Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/e65c3d69c4f3565e907b8ad6d0570e7fc1799f2f12058c69d421ae69595fdc7a 200
+[debug] [2024-04-06T20:37:46.805Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/expense-tracker-a8b75/versions/dba9ec83e2b5c103/files/e65c3d69c4f3565e907b8ad6d0570e7fc1799f2f12058c69d421ae69595fdc7a [stream]
